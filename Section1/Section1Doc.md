@@ -25,3 +25,5 @@ crontab -l
 
 
 However, I realised that my dataset is still not yet produced in a schedule.
+
+I faced some issues trying to use airflow: especially the part on how to run a dag while parsing in arguments for a python function. I have yet to figure due to time constraint.
