@@ -44,5 +44,13 @@ def process_data(file_path, destination_path):
 
     return 
 
+
+
 if __name__ == "__main__":
     process_data('dataset2.csv', 'processed_dataset2.csv')
+    
+
+
+#   Refer to this website 
+# https://towardsdatascience.com/getting-started-with-apache-airflow-df1aa77d7b1b
+# https://airflow.apache.org/docs/apache-airflow/1.10.1/start.html
