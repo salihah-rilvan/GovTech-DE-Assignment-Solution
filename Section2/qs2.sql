@@ -2,7 +2,7 @@
     -- count_list temporary table - to select the manufacturer id and the corresponding
     --         count of products sold using the number of corresponding transaction fields
 
-    -- top_list temporary table - to select the top 3 bu arranging the count_list table
+    -- top_list temporary table - to select the top 3 by arranging the count_list table
     --         descending order and getting the top 3
 
     -- month_sales  temporary table - to select manufacturer_id and corresponding count
@@ -10,6 +10,8 @@
 
     -- main_query -- to select the manufacturer name and the corresponding sales count 
     --         for the desired current month
+    -- Assuming current month is January of the year 2021
+    -- ! There is a bug with line 53 which I have yet to resolve due to time constraint.
 
 with 
     count_list as
@@ -48,7 +50,7 @@ with
         on 
             c.car_serial_number = t.car_serial_number
         where
-            (SELECT EXTRACT(MONTH FROM DATE(t.date))) as month = 1 and (SELECT EXTRACT(YEAR FROM DATE t.date)) as year = 2021
+            (SELECT date_part('month', date t.date)) as month = 1 and (SELECT date_part('year', date t.date)) as year = 2021
         group by 
             tl.manufacturer_id
     ),
