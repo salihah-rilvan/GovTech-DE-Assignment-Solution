@@ -76,6 +76,6 @@ https://markheath.net/post/exploring-postgresql-with-docker
 
 
 
-ER DIAGRAM
+** ER DIAGRAM **
 
 No foreign keys reflected in ER diagram but it is considered when I created tables in SQL
