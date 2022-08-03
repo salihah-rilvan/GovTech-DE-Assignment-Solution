@@ -4,7 +4,9 @@ In my ubuntu terminal, I navigated to the folder where my Data_Pipelines.py was 
 
 I typed:
 
+```
 which python3 
+```
 
 to see my where my python3.exe is
 
