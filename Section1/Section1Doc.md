@@ -62,4 +62,4 @@ However, I am still trying to figure out how to run the DAG while parsing in arg
 
 So far, here is how it looks like on Airflow:
 
-![Screenshot](image.png)
+![Screenshot](image.PNG)
