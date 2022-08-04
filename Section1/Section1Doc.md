@@ -58,8 +58,8 @@ But, used my own data processing function.
 
 4. Navigate to folder ```dags``` to see both my dag file which is ```data-pipeline-dag.py```. The python script containing the function which is ```Data_Pipelines.py``` is also in the same folder.
 
-However, I am still trying to figure out how to run the DAG while parsing in arguments for a python function. 
-
 So far, here is how it looks like on Airflow:
 
 ![Screenshot](image.PNG)
+
+However, although my scheduling in airflow is successful. I am not able to see where my processed dataset is. I suspect there is something wrong with the directory path that I parsed in.
