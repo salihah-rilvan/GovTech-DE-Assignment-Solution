@@ -1,4 +1,5 @@
 -- Documentation
+    -- current table -- to specify the desired month and desired_year --> feel free to change
     -- count_list temporary table - to select the manufacturer id and the corresponding
     --         count of products sold using the number of corresponding transaction fields
 
@@ -10,10 +11,13 @@
 
     -- main_query -- to select the manufacturer name and the corresponding sales count 
     --         for the desired current month
-    -- Assuming current month is January of the year 2021
-    -- ! There is a bug with line 53 which I have yet to resolve due to time constraint.
 
 with 
+    current as 
+    (select
+        1 as desired_month,
+        2021 as desired_year
+    ),
     count_list as
     (
         select c.manufacturer_id, count(t.transaction_id) as count 
@@ -50,7 +54,7 @@ with
         on 
             c.car_serial_number = t.car_serial_number
         where
-            (SELECT date_part('month', date t.date)) as month = 1 and (SELECT date_part('year', date t.date)) as year = 2021
+            (SELECT date_part('month', t.date::date) as month) = (select desired_month from current) and (SELECT date_part('year', t.date::date) as year) = (select desired_year from current)
         group by 
             tl.manufacturer_id
     ),
