@@ -61,8 +61,13 @@ with
 
     main_query as 
     (
-        select m.manufacturer_name, ms.month_count from month_sales as ms 
-        inner join 
+        select 
+            m.manufacturer_name, 
+            CASE WHEN ms.month_count IS NULL THEN 0 ELSE ms.month_count END MonthCount 
+        from 
+            month_sales as ms 
+
+        right join 
             manufacturer as m 
         on
             ms.manufacturer_id = m.manufacturer_id)
