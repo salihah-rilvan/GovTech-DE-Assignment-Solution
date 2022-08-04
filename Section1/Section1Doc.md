@@ -61,4 +61,5 @@ But, used my own data processing function.
 However, I am still trying to figure out how to run the DAG while parsing in arguments for a python function. 
 
 So far, here is how it looks like on Airflow:
-![Screenshot]image.png
+
+![Screenshot](image.png)
