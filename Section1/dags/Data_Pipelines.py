@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def process_data():
+def process_data(file_path, destination_path):
     """Function to process data and return a csv file
 
     Args:
@@ -13,10 +13,6 @@ def process_data():
         pd.dataFrame: The processed dataframe in the printed form
 
     """
-    file_path = "../dataset2.csv"
-
-    destination_path = "../processed_dataset2.csv"
-
     #Importing the csv file
     df = pd.read_csv(file_path)
     
@@ -50,7 +46,7 @@ def process_data():
 
 
 if __name__ == "__main__":
-    process_data()
+    process_data("../dataset2.csv", "../processed_dataset2.csv")
     
 
 
