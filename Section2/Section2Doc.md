@@ -1,4 +1,4 @@
-I already have docker installed in my company previously and using WSL 2.
+I already have docker installed in my laptop previously and using WSL 2.
 
 I am using Ubuntu 20.04 for Windows.
 
